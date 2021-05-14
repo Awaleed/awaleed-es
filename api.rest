@@ -1,13 +1,13 @@
 ### backward
 
-POST http://127.0.0.1:5000/think HTTP/1.1
+POST https://awaleed-es.herokuapp.com/think HTTP/1.1
 content-type: application/json
 
 {"q":"no flight,feather","v":true,"m":"backward"}
 
 ### forward
 
-POST http://127.0.0.1:5000/think HTTP/1.1
+POST https://awaleed-es.herokuapp.com/think HTTP/1.1
 content-type: application/json
 
 {"q":"no flight, feather","v":false,"m":"forward"}
