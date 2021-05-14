@@ -7,22 +7,57 @@ content-type: application/json
 
 ### forward
 
-POST http://127.0.0.1:5000/think HTTP/1.1
+POST https://awaleed-es.herokuapp.com/think HTTP/1.1
 content-type: application/json
 
 {"q":"no flight, feather","v":false,"m":"forward"}
 
 ###  clause
 
-GET http://127.0.0.1:5000/clause HTTP/1.1
+GET https://awaleed-es.herokuapp.com/clause HTTP/1.1
 content-type: application/json
 
 ### PUT clause
 
-PUT http://127.0.0.1:5000/clause HTTP/1.1
+PUT https://awaleed-es.herokuapp.com/clause HTTP/1.1
 content-type: application/json
 
+[
+  {
+    "question": "Can this bird fly?",
+    "answers": {
+       "flight":"Yes",
+       "no flight": "No"
+    }
+  },
+  {
+    "question": "Dose this bird has feather?",
+    "answers": {
+       "feather": "Yes",
+       "no feather": "No"
+    }
+  },
+  {
+    "question": "Is this bird small?",
+    "answers": {
+       "small":"Small",
+       "medium":"Medium",
+       "big":"Big"
+    }
+  }
+]
 ### PUT knowledge
 
-PUT http://127.0.0.1:5000/knowledge HTTP/1.1
+PUT https://awaleed-es.herokuapp.com/knowledge HTTP/1.1
 content-type: application/json
+
+### giphy
+
+GET api.giphy.com/v1/gifs/search?api_key=fISuQ4WFyTVLl5Rvoy9grOMrb6aYAlWn&q=not+sure HTTP/1.1
+content-type: application/json
+api_key: fISuQ4WFyTVLl5Rvoy9grOMrb6aYAlWn
+
+{
+    "api_key": "fISuQ4WFyTVLl5Rvoy9grOMrb6aYAlWn",
+    "q": ""
+}
