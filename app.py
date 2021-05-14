@@ -14,7 +14,7 @@ inferenceEngine.startEngine(knowledgeBaseFile)
 
 @app.route('/')
 def index():
-    return "<h1>Welcome to our server !!</h1>"
+    return "<a href=\"https://assignments-67f1e.web.app\">Enter the system</a>"
 
 
 @app.route('/clause', methods=['GET'])
