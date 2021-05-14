@@ -155,6 +155,7 @@ class Inference:
                 return {"sure": True, "value": [{"target": target, "percent": percent}]}
             else:
                 return {"sure": False, "value": [{"target": target, "percent": percent}]}
+        return {"sure": False, "value": []}
 
     def __runBackwardChain(self, userBase: Knowledge):
         """
@@ -219,3 +220,4 @@ class Inference:
                 return {"sure": True, "value": [{"target": target, "percent": percent}]}
             else:
                 return {"sure": False, "value": [{"target": target, "percent": percent}]}
+        return {"sure": False, "value": []}
