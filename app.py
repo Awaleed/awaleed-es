@@ -1,4 +1,5 @@
 # app.py
+import flask
 import json
 from flask import Flask, request, jsonify
 from engine.inference import Inference
@@ -22,7 +23,10 @@ def clause():
     file = None
     with open(clauseBaseFile, "r") as file:
         file = json.load(file)
-    return jsonify(file)
+    response = flask. jsonify(file)
+    response.headers.add('Access-Control-Allow-Origin', '*')
+    return response
+
 
 
 @app.route('/clause', methods=['PUT'])
