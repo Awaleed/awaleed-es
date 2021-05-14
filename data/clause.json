@@ -1,24 +1,24 @@
 [
   {
     "question": "Can this bird fly?",
-    "answers": {
-      "1": "flight",
-      "2": "no flight"
-    }
+    "answers": [
+      "flight",
+      "no flight"
+    ]
   },
   {
     "question": "Dose this bird has feather?",
-    "answers": {
-      "1": "feather",
-      "2": "no feather"
-    }
+    "answers": [
+      "feather",
+      "no feather"
+    ]
   },
   {
     "question": "Is this bird small?",
-    "answers": {
-      "1": "small",
-      "2": "medium",
-      "3": "big"
-    }
+    "answers": [
+      "small",
+      "medium",
+      "big"
+    ]
   }
 ]
