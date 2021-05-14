@@ -1,0 +1,27 @@
+{
+  "target": [
+    {
+      "name": "penguin",
+      "rules": {
+        "1": "no flight",
+        "2": "no feather"
+      }
+    },
+    {
+      "name": "kiwi",
+      "rules": {
+        "1": "no flight",
+        "2": "feather",
+        "3": "small"
+      }
+    },
+    {
+      "name": "pidgin ",
+      "rules": {
+        "1": "flight",
+        "2": "feather",
+        "3": "big"
+      }
+    }
+  ]
+}

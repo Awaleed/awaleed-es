@@ -1,6 +1,16 @@
 # app.py
+import json
 from flask import Flask, request, jsonify
+from engine.inference import Inference
+
 app = Flask(__name__)
+
+knowledgeBaseFile = "./data/birds/knowledge.json"
+clauseBaseFile = "./data/birds/clause.json"
+
+inferenceEngine = Inference()
+inferenceEngine.startEngine(knowledgeBaseFile)
+
 
 @app.route('/getmsg/', methods=['GET'])
 def respond():
@@ -25,6 +35,7 @@ def respond():
     # Return the response in json format
     return jsonify(response)
 
+
 @app.route('/post/', methods=['POST'])
 def post_something():
     param = request.form.get('name')
@@ -32,9 +43,9 @@ def post_something():
     # You can add the test cases you made in the previous function, but in our case here you are just testing the POST functionality
     if param:
         return jsonify({
-            "Message": f"Welcome {name} to our awesome platform!!",
+            "Message": f"Welcome {param} to our awesome platform!!",
             # Add this option to distinct the POST request
-            "METHOD" : "POST"
+            "METHOD": "POST"
         })
     else:
         return jsonify({
@@ -42,9 +53,28 @@ def post_something():
         })
 
 # A welcome message to test our server
+
+
 @app.route('/')
 def index():
     return "<h1>Welcome to our server !!</h1>"
+
+
+@app.route('/clause', methods=['GET'])
+def clause():
+    file = None
+    with open(clauseBaseFile, "r") as file:
+        file = json.load(file)
+    return jsonify(file)
+
+
+@app.route('/think', methods=['POST'])
+def think():
+    data = request.get_json()
+    result = inferenceEngine.inferenceResolve(
+        data['q'], data['v'], data['m'])
+    return result
+
 
 if __name__ == '__main__':
     # Threaded option to enable multiple instances for multiple user access support
