@@ -2,6 +2,7 @@
   "target": [
     {
       "name": "penguin",
+      "image": "https://media.giphy.com/media/5YuhLwDgrgtRVwI7OY/giphy.gif",
       "rules": {
         "1": "no flight",
         "2": "no feather"
@@ -9,6 +10,7 @@
     },
     {
       "name": "kiwi",
+      "image": "https://media.giphy.com/media/i0iEcUlv77ngI/giphy.gif",
       "rules": {
         "1": "no flight",
         "2": "feather",
@@ -16,7 +18,8 @@
       }
     },
     {
-      "name": "pidgin ",
+      "name": "pidgin",
+      "image": "https://img95.lovepik.com/photo/40109/1861.gif_wh300.gif",
       "rules": {
         "1": "flight",
         "2": "feather",

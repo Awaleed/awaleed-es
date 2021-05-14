@@ -74,9 +74,10 @@ class Knowledge:
 
     def __init__(self):
         self.__target = None
+        self.__image = None
         self.__rules = list()
 
-    def addRule(self, target, rule):
+    def addRule(self, target, image, rule):
         """
         Add new rule to the Knowledge
 
@@ -88,6 +89,7 @@ class Knowledge:
             rule for the Knowledge
         """
         self.__target = target
+        self.__image = image
         self.__rules.append(Rule(rule))
 
     def __str__(self):
@@ -120,6 +122,17 @@ class Knowledge:
             name of the target
         """
         return self.__target
+
+    def getImage(self):
+        """
+        Get the name of the output
+
+        Returns
+        -------
+        str
+            name of the target
+        """
+        return self.__image
 
     def getRules(self):
         """

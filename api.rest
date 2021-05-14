@@ -3,11 +3,11 @@
 POST http://127.0.0.1:5000/think HTTP/1.1
 content-type: application/json
 
-{"q":"medium","v":false,"m":"backward"}
+{"q":"small","v":false,"m":"backward"}
 
 ### forward
 
-POST https://awaleed-es.herokuapp.com/think HTTP/1.1
+POST http://127.0.0.1:5000/think HTTP/1.1
 content-type: application/json
 
 {"q":"no flight, feather","v":false,"m":"forward"}

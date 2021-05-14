@@ -49,7 +49,7 @@ class KnowledgeBaseParser:
             for knowledge in file['target']:
                 knowledgeBase = Knowledge()
                 for rule in knowledge['rules']:
-                    knowledgeBase.addRule(target=knowledge['name'],
+                    knowledgeBase.addRule(target=knowledge['name'], image=knowledge['image'],
                                           rule=knowledge['rules'][rule])
                 self.__knowledgeBase.append(knowledgeBase)
 
