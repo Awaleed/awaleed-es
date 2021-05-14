@@ -1,10 +1,12 @@
 # app.py
-import flask
 import json
+from flask_cors import CORS  # This is the magic
+
 from flask import Flask, request, jsonify
 from engine.inference import Inference
 
 app = Flask(__name__)
+CORS(app)  # This makes the CORS feature cover all routes in the app
 
 knowledgeBaseFile = "./data/knowledge.json"
 clauseBaseFile = "./data/clause.json"
@@ -23,10 +25,7 @@ def clause():
     file = None
     with open(clauseBaseFile, "r") as file:
         file = json.load(file)
-    response = flask. jsonify(file)
-    response.headers.add('Access-Control-Allow-Origin', '*')
-    return response
-
+    return jsonify(file)
 
 
 @app.route('/clause', methods=['PUT'])
