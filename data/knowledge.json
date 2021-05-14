@@ -1,21 +1,26 @@
 {
   "target": [
     {
-      "name": "Peacock",
+      "name": "penguin",
       "rules": {
-        "1": "long feathers",
-        "2": "no flight",
-        "3": "blue color",
-        "4": "eats snakes"
+        "1": "no flight",
+        "2": "no feather"
       }
     },
     {
-      "name": "Hen",
+      "name": "kiwi",
       "rules": {
         "1": "no flight",
-        "2": "brown",
-        "3": "human eatable",
-        "4": "eats grains"
+        "2": "feather",
+        "3": "small"
+      }
+    },
+    {
+      "name": "pidgin ",
+      "rules": {
+        "1": "flight",
+        "2": "feather",
+        "3": "big"
       }
     }
   ]
