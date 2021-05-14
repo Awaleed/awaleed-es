@@ -25,6 +25,24 @@ def clause():
     return jsonify(file)
 
 
+@app.route('/clause', methods=['PUT'])
+def update_clause():
+    data = request.get_json()
+    file = None
+    with open(clauseBaseFile, "w") as file:
+        json.dump(data, file)
+    return 'success'
+
+
+@app.route('/knowledge', methods=['PUT'])
+def update_knowledge():
+    data = request.get_json()
+    file = None
+    with open(knowledgeBaseFile, "w") as file:
+        json.dump(data, file)
+    return 'success'
+
+
 @app.route('/think', methods=['POST'])
 def think():
     data = request.get_json()
